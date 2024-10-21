@@ -60,6 +60,21 @@ Console.Write("\nEnter a directory path: ");
         }
 //list all files within the specified directory
 
+using System;
+using System.IO;
+
+class Program
+{
+    static void Main()
+    {
+        string directoryPath = "your_directory_path_here";
+        string[] files = Directory.GetFiles(directoryPath);
+        foreach (string file in files)
+        {
+            Console.WriteLine(Path.GetFileName(file));
+        }
+    }
+}
 //prompt the user to input a string
 Console.Write("\nEnter a string to format to title case: ");
         string inputString = Console.ReadLine();
@@ -75,3 +90,13 @@ Console.Write("\nEnter a string to format to title case: ");
         GC.WaitForPendingFinalizers(); // Ensures that all finalizers have completed before proceeding
 
         Console.WriteLine("Garbage collection completed."); 
+
+        Console.WriteLine("\npress any key to exit...");
+        Console.ReadKey();
+        }
+        static internal CalculateAge(DateTime birthday)
+        {
+            DateTime today = DateTime.Today;
+            int age = today.Year - birthday.Year;
+            
+        }
